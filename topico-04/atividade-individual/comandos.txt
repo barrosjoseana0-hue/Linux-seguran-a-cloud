@@ -1,0 +1,20 @@
+# Ver serviços ativos no sistema
+systemctl list-units --type=service --state=running
+
+# Ver portas abertas / em escuta
+ss -tuln
+
+# Ver estado do Apache (se usado)
+systemctl status apache2
+
+# Ver estado do firewall
+sudo ufw status verbose
+
+# Permitir porta do serviço web
+sudo ufw allow 80/tcp
+
+# Ativar firewall
+sudo ufw enable
+
+# Ver regras finais do firewall
+sudo ufw status numbered
